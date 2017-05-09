@@ -1,0 +1,102 @@
+/* CSS Document */
+body,ul,li{
+	margin:0;
+	padding:0;
+	}
+body{
+	background:#edc4cb;
+	font-size:0.25rem;}
+ul{
+	list-style:none;}
+
+.container{
+	width:6.4rem;}
+section.logo img{
+	width:6.4rem;
+	}
+section.kong{
+	width:6.4rem;
+	height:0.656rem;}
+header{
+	background:#ab0806;
+	position:fixed;
+	width:6.4rem;}
+header ul{
+	display:flex;
+	justify-content:space-between;
+	}
+header ul li{
+		line-height:0.68rem;
+		color:#fff;
+		padding:0 0.2rem;
+		}
+header ul li img{
+	width:0.34rem;
+	vertical-align:middle;
+	}
+section.solo{
+	margin:0 auto;
+	background:#776266;
+	display:flex;
+	width:6.2rem;
+	border-radius:0.1rem;
+	color:#fff;
+	}
+section.solo .font{
+	padding:0.1rem;
+	flex-grow:2;
+	border-right:0.01rem solid #fff;
+}
+section.solo .font input{
+	background:#776266;
+	border:0rem solid #fff;
+	font-size:0.2rem;
+	color:#fff;
+}
+section.solo img{
+	width:0.39rem;}
+div.solo-1,div.sosuo{
+	padding:0.1rem;
+	border-left:0.1rem soid #fff;
+	}
+section.user ul{
+	padding:0.2rem 0.4rem;
+	display:flex;
+	justify-content:space-between;
+	}
+section.user ul li{
+	text-align:center;
+	}
+section.user ul li img{
+	width:0.5rem;
+	}
+section.user div,section.img div{
+	background:#8b2498;
+	color:#fff;
+	padding:0.156rem 0rem 0.156rem 0.312rem;
+	}
+section.img ul{
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	}
+section.img ul li img{
+	width:3.1rem;
+	}
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:6.4rem;
+	display:none;
+	background:#272822;
+	text-align:center;}
+footer ul{
+	padding:0.156rem 0rem;
+	display:flex;
+	justify-content:space-around;}
+footer ul li{
+	padding:0.156rem 0rem;
+	color:#fff;}
+footer ul li img{
+	width:0.5rem;}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/events.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+/*
+$(function(){
+	var True=true;
+	$("#setting").click(function(){
+		if(True){
+			$("footer").slideDown("slow");
+			True=false;
+			}else{
+				$("footer").slideUp("slow");
+				True=true;}
+	});
+	});*/
+	$(function(){
+	$("#setting").click(function(){
+		$("footer").slideToggle("600");
+		})
+	});
+	
+</script>
+</head>
+
+<body>
+<section class="container">
+<header>
+<ul>
+<li><a href="demo.html"><img src="images/return.png" /></a></li>
+<li>全民购物</li>
+<li id="setting"><img src="images/setting.png" /></li>
+</ul>
+</header>
+<section class="kong"></section>
+<section class="main">
+<section class="logo">
+<img src="images/logo.png" />
+</section>
+<section class="solo">
+<div class="sosuo"><img src="images/sousuo.png" /></div>
+<div class="font"><input type="text" value="搜索商品" /></div>
+<div  class="solo-1"><img src="images/go_search.png" /></div>
+</section>
+<section class="user">
+<ul>
+<li><img src="images/nav1.png" /><br>用户</li>
+<li><img src="images/nav2.png" /><br>消息</li>
+<li><img src="images/nav3.png" /><br>文件</li>
+<li><img src="images/nav4.png" /><br>图片</li>
+</ul>
+<ul>
+<li><img src="images/nav5.png" /><br>音乐</li>
+<li><img src="images/nav6.png" /><br>附近</li>
+<li><img src="images/nav7.png" /><br>分类</li>
+<li><img src="images/nav8.png" /><br>更多</li>
+</ul>
+<div>魅力女装</div>
+</section>
+<section class="img">
+<ul>
+<li><img src="images/brand1.png" /></li>
+<li><img src="images/brand2.png" /></li>
+<li><img src="images/brand3.png" /></li>
+<li><img src="images/brand4.png" /></li>
+<li><img src="images/brand5.png" /></li>
+	<li><img src="images/brand6.png"></li>
+			<li><img src="images/brand7.png"></li>
+			<li><img src="images/brand8.png"></li>
+			<li><img src="images/brand9.png"></li>
+			<li><img src="images/brand10.png"></li>		
+</ul>
+<div>魅力男装</div>
+</section>
+</section>
+<footer>
+<ul>
+<li><img src="images/nav1.png" /><br>用户</li>
+	<li><img src="images/nav1.png" /><br>用户</li>
+	<li><img src="images/nav1.png" /><br>用户</li>
+	<li><img src="images/nav1.png" /><br>用户</li>	
+</ul>
+</footer>
+</section>
+</body>
+</html>
