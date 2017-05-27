@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			background: #F3F5F7;
+			cursor: pointer;
+			margin:0;
+		}
+		.hideli{
+			display:none;}
+		.active{
+			list-style-image:url(images/d.jpg);}
+			.active1{
+				list-style:none;}
+				.active2{
+					list-style-image:url(images/d.jpg);}
+		li{
+			list-style-image:url(images/d.jpg);
+			background:url(images/a.png) no-repeat;
+			padding-left:20px;}
+		div{
+			float:left;
+			width:400px;
+			background:#f90;
+			margin-right:10px;}
+	</style>
+    <script type="text/javascript" src="js/jquery-1.11.2.js" ></script>
+	<script type="text/javascript">
+	window.onload=function(){
+			var par = document.getElementById('par');
+		par.onclick=function(e){
+			
+			if(e.target.nodeName=='LI'){
+				if(e.target.children[0]!==undefined){
+				e.target.children[0].className=e.target.children[0].className===''?'hideli':'';
+					
+					if(e.target.className=="hideli" && e.target.parentNode.className=="active"){
+						e.target.className="active2"}} 
+				if(e.target.children.length>0){
+			if(e.target.children[0].nodeName="UL"){
+				e.target.className="active";
+				}
+			
+				for(var i=0;i<1;i++){
+					for(var j=0;j<e.target.children[0].children.length;j++){
+					console.log(e.target.children[0].children.length);
+					console.log(i+":"+j);
+							if(e.target.children[i].children[j].nodeName="LI" && e.target.children[i].children[j].children.length==0){
+				e.target.children[i].children[j].className="active1";
+							   }
+						}
+					}
+				}
+			}
+		};
+	};
+	</script>
+</head>
+<body>
+<div>
+	<ul id="par">
+	<input type="search" placeholder="Search">
+		<li>index
+			<ul class="hideli">
+				<li>调度域的展示
+					<ul class="hideli">
+						<li>调度域状态
+							<ul class="hideli">
+								<li>调度域质量</li>
+							</ul>
+						</li>
+						<li>域名状态
+							<ul class="hideli">
+								<li>调度域质量</li>
+							</ul>
+						</li>
+						<li>线路状态
+							<ul class="hideli">
+								<li>调度域线路质量</li>
+							</ul>
+						</li>
+						<li>节点状态
+							<ul class="hideli">
+								<li>调度域节点质量</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>质量排名
+					<ul class="hideli">
+						<li>网络排名
+							<ul class="hideli">
+								<li>线路节点排名
+                                    <ul class="hideli">
+                                    	<li>节点详细数据</li>
+                                    </ul>
+								</li>
+								<li>节点线路排名
+									<ul class="hideli">
+										<li>线路详情数据</li>
+									</ul>
+								</li>
+							</ul>
+						</li>	
+						<li>业务排名
+ 							<ul class="hideli">
+ 								<li>线路节点排名</li>
+ 								<li>节点线路排名</li>
+ 							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>宽带总览</li>
+				<li>域名状态
+					<ul class="hideli">
+						<li>网络质量</li>
+						<li>域名排名</li>
+						<li>域名质量</li>
+						<li>域名节点质量</li>
+						<li>域名劫持</li>
+					</ul>
+				</li>
+				<li>线路状态
+					<ul class="hideli">
+						<li>网络质量</li>
+						<li>线路全链路质量</li>
+						<li>线路质量</li>
+						<li>线路可用性</li>
+					</ul>
+				</li>
+				<li>节点状态
+ 					<ul class="hideli">
+ 						<li>网络质量</li>
+ 						<li>节点全链路质量
+                           <ul class="hideli">
+                           	<li>全链路详情</li>
+                           </ul>
+ 						</li>
+ 						<li>节点质量</li>
+ 						<li>节点可用性</li>
+ 					</ul>
+				</li>
+				<li>系统SLA</li>
+			</ul>
+		</li>
+	</ul>
+    
+ </div>
+    <div id="div1"></div>
+</body>
+</html>
