@@ -1,0 +1,460 @@
+/* CSS Document */
+body{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:url(../images/body_bg.jpg) repeat-x;
+}
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#container{
+	width:960px;
+	margin:0 auto;
+	text-align:left;
+}
+#top{
+	height:29px;
+}
+#top form{
+	margin-top:5px;
+	float:left;
+}
+#top form input{
+	vertical-align:middle;
+	margin:0px 4px 2px 3px;
+}
+#top form #userName,#top form #pwd{
+	border:1px solid #e3e3e3;
+}				/*右上角*/
+#top ul{
+	float:right;
+	margin-top:6px;
+}
+#top ul li{
+	float:left;
+	padding-left:10px;
+	margin-left:10px;
+	background:url(../images/top_list.jpg) no-repeat 0 50%;
+}
+#top a{
+	text-decoration:none;
+	color:#616161;
+}
+/*-----------logo相关的一行------------*/
+#top2{
+	clear:both;
+	height:60px;
+	margin-top:5px;
+}
+#top2 img{
+	float:left;
+}
+#top2 div{
+	float:right;
+}
+#top2 div img{
+	margin-left:10px;
+}
+/*---------------主导航------------------*/
+#navigation{
+	height:60px;
+	margin-top:5px;
+	background:url(../images/navigation_bg.jpg) repeat-x;
+}
+#navigation h3{
+	color:#fff;
+	font-size:16px;
+	width:59px;
+	padding:23px 0px 18px 20px;
+	float:left;
+	background:url(../images/navigation_h3_bg.jpg) no-repeat;
+}
+/*行业导航*/
+#navigation ul{
+	float:left;
+	margin:2px 0 0 0;
+	padding:0px;
+}
+#navigation ul li{
+	padding:0px;
+	float:left;
+	width:40px;
+	text-align:center;
+	margin:8px 0px 6px 0px;
+}
+#navigation ul li a{
+	color:#fff;
+	text-decoration:none;
+}
+#navigation ul li a:hover{
+	text-decoration:underline;
+}		/*导航中，最后一组*/
+#navigation .special{
+	width:40px;
+	background:url(../images/navigation_special_bg.jpg) no-repeat;
+}
+#navigation .special li{
+	margin-left:10px;
+	display:inline;
+}
+/*----------当前位置--------------*/
+#locality{
+	clear:both;
+	height:30px;
+	border:1px solid #e4e4e4;
+	margin-top:5px;
+	background:#f8f8f8 url(../images/locality_bg.jpg) no-repeat;
+}
+#locality p{
+	float:left;
+}
+#locality p span{
+	color:#8a8a8a;
+	margin-top:8px;
+	display:block;
+	float:left;
+	margin-left:15px;
+	display:inline;
+}
+#locality p a{
+	text-decoration:none;
+	color:#000;
+	float:left;
+	margin-top:8px;
+}
+#locality p img{
+	float:left;
+	margin:0px 0px 0px 5px;
+}/*------------------左侧正文-----------------------*/
+#leftcontent{
+	width:720px;
+	float:left;
+	margin-top:10px;
+}
+/*---------加盟菜单-------------*/
+.league_menu{				
+	height:100px;
+	width:720px;
+	font-family:"宋体";
+	position:relative;
+}						
+.league_menu div.new_menu { 		/*TAB导航div*/
+	clear:both;
+}
+.league_menu div.new_menu ul{
+	margin:0px;
+	padding:0px;
+	height:43px;
+}
+.league_menu div.new_menu li { 
+ 	float:left; 
+	text-align:center; 
+	cursor:pointer;
+	margin:0px 15px;
+}
+.league_menu div.new_menu li a{
+		padding:13px 0px;
+		display:block;
+}
+.league_menu div.new_menu li.selected {		/*为jquery准备*/
+	font-weight:bold;
+}
+.league_menu div.new_txt {
+	clear:both;
+	height:58px;
+	width:720px;
+	display:block;
+	position:absolute;		/*相对于父标记定位*/
+	top:35px;
+	background-color:#f9f9f9;
+	border-top:1px solid #e4e3e8;
+	border-bottom:1px solid #e4e3e8;
+}
+.league_menu div.new_txt ul{
+	margin-left:10px;
+}
+.league_menu div.new_txt .btn{
+	position:absolute;
+	top:-30px;
+	right:0px;
+}
+.league_menu div.new_txt ul a{
+	display:inline-block;
+	word-wrap:break-word;
+	color:#000;
+	text-decoration:none;
+	margin:7px 5px;
+}
+.league_menu div.new_txt div.hide{	/*将内容隐藏*/
+	display:none
+}
+/*-------banner---------*/
+#banner {
+	width:720px; 
+	height:150px; 
+	overflow:hidden; 
+	position:relative;
+	text-align:left;
+}
+#banner ul li img{
+	width:720px;
+}
+#banner ul {
+	height:150px;
+	position:absolute;
+}
+#banner ul li {
+	float:left;
+	width:720px;
+	height:150px;
+	overflow:hidden;
+	position:relative;
+	background:#000;
+}			/*按钮背景--根据自己需求来定义*/
+#banner .btnBg {
+	position:absolute;
+	width:720px;
+	height:40px;
+	left:0;
+	bottom:0;
+	background:#000;
+}			/*每一个按钮*/
+#banner .btn {
+	position:absolute;
+	height:24px;
+	right:0;
+	bottom:0px;
+	padding-left:10px;
+}			/*每一个按钮的默认样式*/
+#banner .btn span {
+	display:inline-block;
+	_display:inline;
+	_zoom:1;
+	width:19px;
+	height:19px;
+	line-height:20px;
+	text-align:center;
+	font-size:16px;
+	margin-right:10px;
+	cursor:pointer;
+	color:#fff;
+	border:1px solid #938e8b;
+	background-color:#938e8b;
+}			/*每一个按钮的滑入样式*/
+#banner .btn span.on {
+	border:1px solid #938e8b;
+	background-color:#FFF;
+	color:#938e8b;
+}
+/*--------关键字排序-------------*/
+#order ul{
+	height:30px;
+	margin-top:15px;
+	padding-left:5px;
+	border-bottom:1px solid #ccc;
+}
+#order ul li{
+	float:left;
+	height:18px;
+	width:18px;
+	margin:0px 5px 0px 4px;
+	text-align:center;
+	display:inline;
+}
+#order ul li a{
+	color:#a5a5a5;
+	text-decoration:none;
+	display:block;
+	width:16px;
+	border:1px solid #ccc;
+	background-color:#f7f7f7;
+	padding:1px 0px 2px 0px;
+}
+/*--------代理商简介--------*/
+.agencyintro{
+	height:185px;
+	position:relative;
+	border-bottom:1px solid #ccc;
+}
+.agencyintro p{
+	width:600px;
+	word-wrap:break-word;
+	float:left;
+	text-indent:24px;
+	color:#a9a9a9;
+	line-height:22px;
+	margin-left:20px;
+	display:inline;
+	font-family:"宋体";
+}
+.agencyintro p a{
+	color:#072eff;
+	text-decoration:none;
+}
+.agencyintro h3{
+	font-size:16px;
+	margin:30px 0px 10px 10px;
+	padding-left:20px;
+	background:url(../images/left_h3_list.jpg) no-repeat 0 50%;
+}
+.agencyintro .tag{
+	display:block;
+	text-indent:0;
+	position:absolute;
+	bottom:10px;
+	left:15px;
+	padding-left:25px;
+	background:url(../images/tag.jpg) no-repeat 0 50%;
+}
+.agencyintro ul{
+	float:right;
+}
+.agencyintro ul li{
+	line-height:22px;
+	border-bottom:1px dashed #a9a9a9;
+}
+.agencyintro ul li a{
+	color:#a9a9a9;
+	text-decoration:none;
+}
+/*左侧页面导航*/
+#leftcontent #page{
+	height:45px;
+	margin-top:25px;
+}
+#leftcontent #page ul{
+	margin:0px 0px 0px 150px;
+}
+#leftcontent #page li{
+	float:left;
+	margin:0 5px;
+}
+#leftcontent #page li a{
+	color:#858585;
+	display:block;
+	text-decoration:none;
+	border:1px solid #ccc;
+	padding:2px 4px 2px 4px;
+	vertical-align:bottom;
+}
+#leftcontent #page li a:hover{
+	text-decoration:underline;
+	background-color:#eee;
+}
+#leftcontent #page .now a,#leftcontent #page .now a:hover{
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	border:1px solid #000;
+	padding:2px 4px 2px 4px;
+	vertical-align:bottom;
+	background-color:#000;
+	font-weight:bold;
+}
+/*--------右侧内容---------*/
+#rightcontent{
+	float:right;
+	width:235px;
+	margin-top:45px;
+}
+#rightcontent .dljg{
+	border:1px solid #bababa;
+	padding:5px 0px 5px 0px;
+	font-size:14px;
+	display:block;
+	background:url(../images/rightcontent_dljg_list.jpg) no-repeat 95% 50%;
+}
+#rightcontent form{
+	border:1px solid #bababa;
+	height:22px;
+	margin-top:10px;
+}
+#rightcontent .search{
+	padding-top:4px;
+	float:left;
+	background-color:transparent;
+	border:0px;
+}
+#rightcontent .btn{
+	float:right;
+	margin-right:5px;
+}
+#rightcontent img{
+	vertical-align:bottom;
+}
+#rightcontent h3{
+	text-align:center;
+	font-weight:normal;
+	font-size:14px;
+	margin-top:10px;
+	background:url(../images/rightcontent_h3_bg.jpg) no-repeat;
+}
+#rightcontent ul{
+	margin-top:10px;
+	border-top:1px solid #ccc;
+}
+#rightcontent ul li{
+	padding-left:10px;
+	height:50px;
+	padding-top:15px;
+	border-bottom:1px solid #ccc;
+	background:url(../images/rightcontent_li_list.jpg) no-repeat 0 20px;
+}
+#rightcontent ul li span{
+	color:#a9a9a9;
+	display:block;
+	margin-top:5px;
+}
+#rightcontent .brand_links{
+	display:block;
+	margin-top:10px;
+	*margin-top:7px;
+}
+#rightcontent .brand_links img{
+	margin-bottom:5px;
+}
+/*--------------版权---------------*/
+#footer{
+	margin-top:5px;
+	height:130px;
+}
+#footer .nav{
+	height:23px;
+	border:2px solid #e0e0e0;
+	background:url(../images/footer_navigation_bg.jpg) repeat-x;
+}
+#footer .nav li{
+	float:left;
+	margin-top:4px;
+	width:135px;
+	border-right:1px solid #fff;
+	text-align:center;
+}
+#footer .nav li a{
+	text-decoration:none;
+	color:#808080;
+}
+#footer .nav li a:hover{
+	text-decoration:underline;
+	color:#808080;
+}
+#footer img{
+	float:left;
+	margin-top:20px;
+}
+#footer .content{
+	margin-top:20px;
+	margin-left:20px;
+	float:left;
+	border-left:1px solid #808080;
+	color:#808080;
+	padding-left:20px;
+}
+#footer .content li{
+	line-height:22px;
+}

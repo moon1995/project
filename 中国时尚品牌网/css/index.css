@@ -1,0 +1,617 @@
+﻿/* CSS Document */
+body{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:url(../images/body_bg.jpg) repeat-x;
+}
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#container{
+	width:960px;
+	margin:0 auto;
+	text-align:left;
+}
+#top{
+	height:29px;
+}
+#top form{
+	margin-top:5px;
+	float:left;
+}
+#top form input{
+	vertical-align:middle;
+	margin:0px 4px 2px 3px;
+}
+#top form #userName,#top form #pwd{
+	border:1px solid #e3e3e3;
+}				/*右上角*/
+#top ul{
+	float:right;
+	margin-top:6px;
+}
+#top ul li{
+	float:left;
+	padding-left:10px;
+	margin-left:10px;
+	background:url(../images/top_list.jpg) no-repeat 0 50%;
+}
+#top a{
+	text-decoration:none;
+	color:#616161;
+}
+/*-----------logo相关的一行------------*/
+#top2{
+	clear:both;
+	height:60px;
+	margin-top:5px;
+}
+#top2 img{
+	float:left;
+}
+#top2 div{
+	float:right;
+}
+#top2 div img{
+	margin-left:10px;
+}
+/*---------------主导航------------------*/
+#navigation{
+	height:60px;
+	margin-top:5px;
+	background:url(../images/navigation_bg.jpg) repeat-x;
+}
+#navigation h3{
+	color:#fff;
+	font-size:16px;
+	width:59px;
+	padding:23px 0px 18px 20px;
+	float:left;
+	background:url(../images/navigation_h3_bg.jpg) no-repeat;
+}
+/*行业导航*/
+#navigation ul{
+	float:left;
+	margin:2px 0 0 0;
+	padding:0px;
+}
+#navigation ul li{
+	padding:0px;
+	float:left;
+	width:40px;
+	text-align:center;
+	margin:8px 0px 6px 0px;
+}
+#navigation ul li a{
+	color:#fff;
+	text-decoration:none;
+}
+#navigation ul li a:hover{
+	text-decoration:underline;
+}		/*导航中，最后一组*/
+#navigation .special{
+	width:40px;
+	background:url(../images/navigation_special_bg.jpg) no-repeat;
+}
+#navigation .special li{
+	margin-left:10px;
+	display:inline;
+}
+/*----------当前位置--------------*/
+#locality{
+	clear:both;
+	height:30px;
+	border:1px solid #e4e4e4;
+	margin-top:5px;
+	background:#f8f8f8 url(../images/locality_bg.jpg) no-repeat;
+}
+#locality p{
+	float:left;
+}
+#locality p span{
+	color:#8a8a8a;
+	margin-top:8px;
+	display:block;
+	float:left;
+	margin-left:15px;
+	display:inline;
+}
+#locality p a{
+	text-decoration:none;
+	color:#000;
+	float:left;
+	margin-top:8px;
+}
+#locality p img{
+	float:left;
+	margin:0px 0px 0px 5px;
+}
+#locality form{
+	float:right;
+	margin:2px 1px 0 0;
+	white-space:localityrap;
+}
+#locality form input{
+	float:left;
+}
+#locality #text{
+	padding:4px 0px;
+	border:1px solid #bababa;
+}
+/*--------所有服装的默认样式--------*/
+.clothing{
+	margin-top:20px;
+	clear:both;
+}
+.clothing .menu{
+	height:40px;
+	border-left:3px solid #e92a00;
+	border-bottom:1px solid #e92a00;
+	border-top:1px solid #dbdbdb;
+	border-right:1px solid #dbdbdb;
+}
+.clothing .menu h3{
+	float:left;
+	color:#e92a00;
+	font-size:18px;
+	display:inline;
+	margin:6px 0px 0px 7px;
+}	/*菜单中地区名字*/
+.clothing .menu .district{
+	border-left:1px solid #e92a00;
+	float:left;
+	height:19px;
+	margin:15px 0px 0px 8px;
+	padding-left:3px;
+}
+.clothing .menu .district li{
+	float:left;
+	margin:2px 3px 0px 3px;
+}
+.clothing .menu .district li a{
+	text-decoration:none;
+	color:#888;
+}
+.clothing .menu .district li a:hover{
+	text-decoration:underline;
+	color:#000;
+}	/*菜单中服饰的种类*/
+.clothing .menu .classify{
+	float:right;
+	margin-top:16px;
+}
+.clothing .menu .classify li{
+	float:left;
+	width:85px;
+	margin-left:1px;
+	height:19px;
+	background:url(../images/clothing_li.jpg) no-repeat;
+}
+.clothing .menu .classify .now_bg{
+	background:url(../images/clothing_li_red.jpg) no-repeat;
+}
+.clothing .menu .classify li a{
+	text-decoration:none;
+	color:#fff;
+	display:inline-block;
+	width:75px;
+	padding:2px 0px 2px 10px;
+}
+.clothing .menu .classify li a:hover{
+	text-decoration:underline;
+}
+/*-----------服装内的左侧内容*/
+.clothing .left{
+	width:720px;
+	float:left;
+	margin-top:10px;
+}		/*服装内的左侧品牌展示*/
+.clothing .left .brand li{
+	float:left;
+	text-align:center;
+	margin-bottom:20px;
+	width:144px;
+}
+.clothing .left .brand li img{
+	margin-bottom:10px;
+}	/*最新消息*/
+.clothing .left .news{
+	clear:both;
+	border:3px solid #dbdbdb;
+	height:25px;
+	position:relative;
+}
+.clothing .left .news h4{
+	color:#e92a00;
+	float:left;
+	font-size:12px;
+	display:inline;
+	margin:5px 0px 0px 10px;
+}
+.clothing .left .news marquee{
+	float:left;
+	position:absolute;
+	width:650px;
+	top:5px;
+}
+.clothing .left .news marquee a{
+	margin:0px 10px;
+	text-decoration:none;
+	color:#000;
+	display:inline-block;
+}
+.demo {
+	margin-top:8px;
+    overflow:hidden;
+    width:720px;
+}
+.demo a{
+	margin:0px 5px;
+	text-align:center;
+	text-decoration:none;
+	color:#474747;
+	display:inline-block;
+}
+.demo img {
+		height:40px;
+		width:140px;
+		margin-bottom:5px;
+}
+.indemo {
+     float:left;
+     width:800%;
+}
+.demo1 {
+     float:left;
+}
+.demo2 {
+     float:left;
+}
+/*-----------服装内的右侧内容*/
+.clothing .right{
+	width:225px;
+	float:right;
+	margin-top:10px;
+	position:relative;
+}					
+.clothing .right div.new_menu { 		/*资讯内的TAB导航div*/
+	clear:both;
+}
+.clothing .right div.new_menu ul{
+	margin:0px;
+	padding:0px;
+	height:19px;
+	background:url(../images/clothing_right_li_bg.jpg) repeat-x;
+}
+.clothing .right div.new_menu li { 
+ 	float:left;
+	width:70px;
+	text-align:center;
+	margin-right:1px;
+	background-color:#ccc;
+}
+.clothing .right .new_menu li a{
+	padding:2px 0px;
+	display:block;
+	color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+}
+.clothing .right .new_menu li a:hover{
+	text-decoration:underline;
+}
+.clothing .right .new_menu li.selected {		/*为jquery准备*/
+	background-color:#e92a00;
+}
+.clothing .right .new_txt {				/*资讯内的文字div*/		
+	clear:both;
+	width:225px;
+	display:block;
+	height:330px;
+	position:absolute;
+	top:25px;
+}
+.clothing .right .new_txt .more {
+	position:absolute;
+	bottom:0px;
+	right:5px;
+	color:#00519e;
+}
+.clothing .right .new_txt ul li{
+	border-bottom:1px dashed #c2c2c2;
+	line-height:30px;
+}
+.clothing .right .new_txt ul li a{
+	text-decoration:none;
+	color:#494949;
+}
+.clothing .right .new_txt ul li a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+.clothing .right .new_txt .hide{	/*将内容隐藏*/
+	display:none
+}
+/*---------------------以上为统一样式结束----------------*/
+/*------------男装单一样式---------------*/
+#men_clothing{
+	margin-top:5px;
+}
+#men_clothing .menu{
+	border-left:3px solid #024c8d;
+	border-bottom:1px solid #024c8d;
+}
+#men_clothing .menu h3{
+	color:#024c8d;
+}
+#men_clothing .menu .district{
+	border-left:1px solid #024c8d;
+}
+/*菜单中服饰的种类的当前背景*/
+#men_clothing .menu .classify .now_bg{
+	background:url(../images/clothing_li_blue.jpg) no-repeat;
+}
+
+#men_clothing .left .news h4{
+	color:#024c8d;
+}
+/*为jquery准备*/
+#men_clothing .right div.new_menu li.selected {		
+	background-color:#024c8d;
+}
+/*------------休闲单一样式---------------*/
+#sportswear .menu{
+	border-left:3px solid #4e9fa2;
+	border-bottom:1px solid #4e9fa2;
+}
+#sportswear .menu h3{
+	color:#4e9fa2;
+}
+#sportswear .menu .district{
+	border-left:1px solid #4e9fa2;
+}
+/*菜单中服饰的种类的当前背景*/
+#sportswear .menu .classify .now_bg{
+	background:url(../images/clothing_li_green.jpg) no-repeat;
+}
+/*最新消息*/
+#sportswear .left .news h4{
+	color:#4e9fa2;
+}
+/*为jquery准备*/
+#sportswear .right div.new_menu li.selected {		
+	background-color:#4e9fa2;
+}
+/*------------运动。。单一样式---------------*/
+#motion .menu{
+	border-left:3px solid #074b8c;
+	border-bottom:1px solid #074b8c;
+}
+#motion .menu h3{
+	color:#074b8c;
+}
+#motion .menu .district{
+	border-left:1px solid #074b8c;
+}
+/*菜单中服饰的种类的当前背景*/
+#motion .menu .classify .now_bg{
+	background:url(../images/clothing_li_blue.jpg) no-repeat;
+}
+/*最新消息*/
+#motion .left .news h4{
+	color:#074b8c;
+}
+/*为jquery准备*/
+#motion .right div.new_menu li.selected {		
+	background-color:#484890;
+}
+/*------------内衣。。单一样式---------------*/
+#underwear .menu{
+	border-left:3px solid #783201;
+	border-bottom:1px solid #783201;
+}
+#underwear .menu h3{
+	color:#783201;
+}
+#underwear .menu .district{
+	border-left:1px solid #783201;
+}
+/*菜单中服饰的种类的当前背景*/
+#underwear .menu .classify .now_bg
+	background:url(../images/clothing_li_brown.jpg) no-repeat;
+}
+/*最新消息*/
+#underwear .left .news h4{
+	color:#783201;
+}
+/*为jquery准备*/
+#underwear .right div.new_menu li.selected {		
+	background-color:#783201;
+}
+/*------------童装。。单一样式---------------*/
+#children .menu{
+	border-left:3px solid #ff6600;
+	border-bottom:1px solid #ff6600;
+}
+#children .menu h3{
+	color:#ff6600;
+}
+#children .menu .district{
+	border-left:1px solid #ff6600;
+}
+/*菜单中服饰的种类的当前背景*/
+#children .menu .classify .now_bg{
+	background:url(../images/clothing_li_yellow.jpg) no-repeat;
+}
+/*最新消息*/
+#children .left .news h4{
+	color:#ff6600;
+}
+/*为jquery准备*/
+#children .right div.new_menu li.selected {		
+	background-color:#ff6600;
+}
+/*------------鞋业。。单一样式---------------*/
+#shoes .menu{
+	border-left:3px solid #575c22;
+	border-bottom:1px solid #575c22;
+}
+#shoes .menu h3{
+	color:#575c22;
+}
+#shoes .menu .district{
+	border-left:1px solid #575c22;
+}
+/*菜单中服饰的种类的当前背景*/
+#shoes .menu .classify .now_bg{
+	background:url(../images/clothing_li_Brown_green.jpg) no-repeat;
+}
+/*最新消息*/
+#shoes .left .news h4{
+	color:#575c22;
+}
+/*为jquery准备*/
+#shoes .right div.new_menu li.selected {		
+	background-color:#575c22;
+}
+/*----------------服装代理------------------*/
+#agency{
+	margin-top:10px;
+	height:230px;
+	background:url(../images/men_clothing_right_li_bg.jpg) repeat-x;
+}
+#agency h3{
+	background-color:#064b8e;
+	color:#fff;
+	width:80px;
+	padding:2px 0px 3px 20px;
+	font-size:12px;
+	font-weight:normal;
+}
+#agency .agency_district{
+	width:720px;
+	float:left;
+	margin-top:10px;
+}
+#agency .agency_district p{
+	height:20px;
+	margin-bottom:15px;
+	background-color:#fafafa;
+	border-bottom:1px solid #dcdcdc;
+}
+#agency .agency_district p a{
+	text-decoration:none;
+	color:#000;
+	display:inline-block;
+	margin:0px 10px;
+}
+#agency .agency_district p a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+#agency .agency_district li{
+	float:left;
+	text-align:center;
+	width:72px;
+	height:40px;
+}
+#agency .agency_district li a{
+	text-decoration:none;
+	color:#a5a5a5;
+}
+#agency .agency_district li a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+#agency .agency_news{
+	float:right;
+	width:230px;
+	margin-top:4px;
+}
+#agency .agency_news li{
+	border-bottom:1px dashed #c2c2c2;
+	line-height:30px;
+}
+#agency .agency_news li a{
+	text-decoration:none;
+	color:#494949;
+}
+#agency .agency_news li a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+/*--------友情链接-----------*/
+#links{
+	clear:both;
+	height:210px;
+	border-bottom:1px solid #a8a8a8;
+}
+#links h3{
+	font-size:12px;
+	font-weight:normal;
+	padding:8px 0px 7px 10px;
+	border-bottom:1px solid #d7d7d7;
+	background:url(../images/links_h3_bg.jpg) repeat-x;
+}
+#links ul{
+	clear:both;
+	margin:10px 0px 0px 10px;
+}
+#links li{
+	float:left;
+	height:24px;
+	width:155px;
+}
+#links a{
+	text-decoration:none;
+	color:#494949;
+}
+#links a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+/*--------------版权---------------*/
+#footer{
+	margin-top:5px;
+	height:130px;
+}
+#footer .nav{
+	height:23px;
+	border:2px solid #e0e0e0;
+	background:url(../images/footer_navigation_bg.jpg) repeat-x;
+}
+#footer .nav li{
+	float:left;
+	margin-top:4px;
+	width:135px;
+	border-right:1px solid #fff;
+	text-align:center;
+}
+#footer .nav li a{
+	text-decoration:none;
+	color:#808080;
+}
+#footer .nav li a:hover{
+	text-decoration:underline;
+	color:#808080;
+}
+#footer img{
+	float:left;
+	margin-top:20px;
+}
+#footer .content{
+	margin-top:20px;
+	margin-left:20px;
+	float:left;
+	border-left:1px solid #808080;
+	color:#808080;
+	padding-left:20px;
+}
+#footer .content li{
+	line-height:22px;
+}
