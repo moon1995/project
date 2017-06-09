@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+.about-container{
+	margin:0px auto;
+	padding:0px;
+	width:1024px;
+	}
+/*banner*/
+.banner{
+	margin:0px;
+	padding:0px;
+	}
+.xia{
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	overflow:hidden;
+	width:1024px;
+	position:relative;
+	}
+/* 左边导航	*/
+.about-left{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:132px;
+	float:left;
+	}	
+.about-left h3{
+	margin:0px;
+	padding:0px;
+	color:#fff;
+	font-size:22px;
+	font-weight:normal;
+	line-height:52px;
+	text-align:center;
+	}	
+.about-left h3 a:link,.about-left h3 a:visited{
+	text-decoration:none;
+	color:#fff;
+	}	
+.about-left ul{
+	margin:0px 0px 0px 10px;
+	padding:10px 0px 0px 0px;
+	list-style-type:none;
+	background:#F3F3F3;
+	}
+.about-left ul li{
+	margin:0px;
+	padding:0px;
+	border-bottom:1px solid #C5C5C5;
+	}	
+.about-left ul li a:link,.about-left ul li a:visited{
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+	display:block;
+	color:#141e5b;
+	background:#F3F3F3;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:16px;
+	}	
+.about-left ul li a:hover{
+	margin:0px 0px 0px -4px;
+	color:#5f5f5f;
+	border-left:4px solid #50A8FF;
+	}	
+.bot{
+	border-top:1px solid #C5C5C5;
+	}	
+.about-left ul li.xz a{
+	margin:0px 0px 0px -4px;
+	padding:0px;
+	text-decoration:none;
+	display:block;
+	color:#5f5f5f;
+	background:#F3F3F3;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:16px;
+	border-left:4px solid #50A8FF;
+	}
+.zuotu{
+	margin:0px;
+	padding:0px;
+	}
+.zuotu img{
+	width:132px;
+	height:180px;
+	border-top:5px solid #71B7FD;
+	}
+.jbxx{
+	margin:0px;
+	padding:10px;
+	background:#71B7FD;
+	}	
+.jbxx p{
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	color:#fff;
+	font-size:16px;
+	}
+/*右边内容*/
+.about-right{
+	margin:22px 0px 0px 0px;
+	padding:0px;
+	float:right;
+	width:875px;
+	}	
+/*标题3*/
+.in-biao3{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	border-bottom:1px solid #C5C5C5;
+	font-size:22px;
+	color:#141e5b;
+	}	
+.in-biao3 a:link,.in-biao3 a:visited{
+	text-decoration:none;
+	color:#141e5b;
+	}	
+/*内容*/
+.dazy{
+	margin:15px 0px 0px 0px;
+	padding:0px;
+	overflow:hidden;
+	}
+.df{
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	}
+.fanhui{
+	margin:0px 0px 0px 20px;
+	padding:0px;
+	float:left;
+	font-size:16px;
+	color:#545454;
+	}
+.fanhui a:link,.fanhui a:visited{
+	text-decoration:none;
+	color:#545454;
+	}
+.fanhui a:hover{
+	text-decoration:underline;
+	}
+.sumiaodang{
+	margin:0px 70px;
+	padding:0px;
+	float:left;
+	font-size:30px;
+	color:#69b4ff;
+	}
+
+.secai{
+	margin:0px 70px;
+	padding:0px;
+	float:left;
+	font-size:30px;
+	color:#69b4ff;
+	}
+	
+.suxie{
+	margin:0px 0px 0px 70px;
+	padding:0px;
+	float:left;
+	font-size:30px;
+	color:#69b4ff;
+	}
+.mx{
+	margin:30px 0px 0px 0px;
+	padding:0px;
+	}
+.mx table,.mx tr,.mx td{
+	margin:0px;
+	padding:0px;
+	border:1px solid #E0E0E0;
+	overflow:hidden;
+	}
+.vb{
+		border-right:1px solid #E0E0E0;
+	}
+.mx img{
+	margin:0px;
+	padding:10px;
+	}
+.hj img{
+	margin:0px;
+	padding:10px;
+	width:220px;
+	}
+.hj  a{
+	margin:0px;
+	padding:0px;
+	display:block;
+	}
+.hj a:hover{
+	margin:0px;
+	padding:0px;
+	background:#71B7FD;
+	}
+/*点击*/
+#content{ margin:0px auto;cursor:pointer;}
+#imgbox-loading {position: absolute;top: 0;left: 0;	cursor: pointer;display: none;z-index: 90;cursor:pointer;}
+#imgbox-loading div {background: #FFF;width: 100%;height : 100%;cursor:pointer;}
+#imgbox-overlay {position: absolute;top: 0;	left: 0;width: 100%;height: 100%;background: #000;display: none;z-index: 80;cursor:pointer;}
+.imgbox-wrap {position: absolute;top: 0;left: 0;background: #FFF;display: none;	z-index: 90;cursor:pointer;}
+.imgbox-img {padding: 0;margin: 0;border: none;width: 100%;	height: 100%;vertical-align: top;cursor:pointer;}
+.imgbox-title {	padding-top: 10px;font-size: 11px;text-align: center;font-family: Arial;color: #333;display: none;cursor:pointer;}
+.imgbox-bg-wrap {position: absolute;padding: 0;margin: 0;display: none;cursor:pointer;}
+.imgbox-bg {position: absolute;width: 20px;	height: 20px;cursor:pointer;}
+#example1{
+	 cursor:pointer;}
+
+
+
+
+
+	
+	
+	
