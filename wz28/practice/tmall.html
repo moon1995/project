@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript">
+(function(){
+	var y=500;
+	window.onscroll=function(){
+		var content=document.getElementById("content");
+		var divs=content.getElementsByTagName("div");
+		var key=0;
+		var scrollY=0;
+		if(-[1,]){
+			scrollY=window.pageYOffset;
+		}else{
+			scrollY=document.scrollTop;
+			}
+		if(scrollY>500){
+			y+=500;
+			k=y/500+k;
+			divs[k].style.display="bolck";
+			if(window.XMLHttpRequest){
+				var xml=new XMLHttpRequest();
+				}else{
+					var xml=new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					var data="infoid="+k;
+					xml.open("POST","infor.php");
+					xml.setReuestHeader("content-type","application/x-www-form-urlencoded");
+					xml.onreadystatechange=function(){
+						if(xml.readyState==4 && xml.status==200){
+							var data=eval("("+xml.responseText+")");
+							var str="<ul class='info'>";
+							for(var j=0;j<data.length;j++){
+								str+="<li><img src=images/"+data[j].impath+" width=200px><br>"+data[j].intro+"</li>";
+							}
+							divs[k].innerHTML=str+"</ul>";
+						}
+					}
+				xml.send(data);
+			}
+		}
+	})();
+</script>
+<style>
+body,ul,h3,li{
+	magin:0px;
+	padding:0px;
+	}
+#top{
+	height:40px;
+	background:#d90;}
+#logo{
+	width:1290px;
+	height:200px;
+	background:#f00;
+	position:relative;
+	left:50%;
+	margin-left:-645px;}
+#banner{
+	background:#ff0;
+	height:500px;}
+#content{
+	width:1200px;
+	position:relative;
+	left:50%;
+	margin-left:-600px;
+	text-align:center;}
+	#content div{
+		background:#e5e5e5;
+		height:500px;
+		margin-bottom:20px;
+		}
+	#content h3{
+		background:#666;}
+		ul.info{
+			margin:0;
+			padding:0;
+		}
+		ul.info li{
+			float:left;
+			margin-right:20px;
+		}
+</style>
+</head>
+
+<body>
+<div id="top"></div>
+<div id="logo"></div>
+<div id="banner"></div>
+<div id="content">
+<div style="display:block;">
+<h3>title1</h3>
+<p>content1</p>
+</div>
+<div style="display:block;">
+<h3>title2</h3>
+<p>content2</p>
+</div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+<div><img src="images/loading.gif"></div>
+</div>
+</body>
+</html>

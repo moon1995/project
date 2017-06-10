@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax</title>
+	<style>
+	div{
+		overflow:hidden;
+		
+		}
+	#in{
+		background:#d90;
+	}
+	#con{
+		background:#ddd;
+	}
+	ul{
+		list-style:none;
+	}
+
+	img{
+		width:200px;
+		height:200px;
+	}
+	</style>
+	<script src="add.js">
+	</script>
+	<script src="ajax1.js"></script>
+	<script>
+		add(window,"load",function(){
+			var ina=document.getElementById("in");
+			var ajax=new Ajax();
+			ajax.open("POST","infor.php");
+			ajax.header();
+			var post_data="cate=ina";
+			ajax.onready(function(){
+				if(ajax.xhtml.readyState==4 && ajax.xhtml.status==200){
+					var data=eval("("+ajax.xhtml.responseText+")");
+					var str="<h3>业内资讯</h3><ul>";
+					for(var i in data){
+					str+="<li><img src="+data[i].img+" />"+data[i].name+data[i].li+"</li>"
+					}
+				
+				}
+					ina.innerHTML=str+"</ul>";
+			
+			});
+			
+				ajax.Send(post_data);
+				var con=document.getElementById("con");
+				var ajax1=new Ajax();
+			ajax1.open("POST","infor.php");
+			ajax1.header();
+			var post_data1="cate=con";
+			ajax1.onready(function(){
+				if(ajax1.xhtml.readyState==4 && ajax1.xhtml.status==200){
+					var data=eval("("+ajax1.xhtml.responseText+")");
+					var str="<h3>业内资讯</h3><ul>";
+					for(var i in data){
+					str+="<li><img src="+data[i].img+" />"+data[i].name+data[i].li+"</li>"
+					}
+				
+				}
+					con.innerHTML=str+"</ul>";
+			
+			})
+				ajax1.Send(post_data1);
+		})
+	</script>
+	</head>
+	<body>
+		<div id="in">
+			<ul>
+				<li><img src="../images/h1.jpg" /></li>
+				<li><img src="../images/h2.jpg" /></li>
+				<li><img src="../images/h3.jpg" /></li>
+			</ul>
+		</div>
+		<div id="con">
+			<ul>
+				<li><img src="../images/q1.jpg"/></li>
+				<li><img src="../images/q2.jpg" /></li>
+				<li><img src="../images/q3.jpg" /></li>
+			</ul>
+		</div>
+	</body>
+</html>

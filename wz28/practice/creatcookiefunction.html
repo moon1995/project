@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>创建cookie封装成函数</title>
+<script>
+//创建cookie函数有3个
+//变量名 变量值 过期时间
+function setCookie(name,value,day){
+   var data=name+"="+encodeURI(value);
+   var myDate=new Date();
+   var day10ms=myDate.getTime()+day*24*3600*1000;
+   myDate.setTime(day10ms);
+   document.cookie=data+"; expires="+myDate.toGMTString();
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

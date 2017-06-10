@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>无标题文档</title>
+<script type="text/javascript" src="flexible.js" ></script>
+
+<style>
+body{
+	margin:0;
+	padding:0;}
+.father{
+	display:flex;
+	background:#F39;
+	}
+.son1{
+	background:#f90;
+	width:3.906rem;
+	height:3.906rem;
+	margin:1.01rem 0rem 1.01rem 0.875rem;
+	}
+.son2{
+	width:5.968rem;
+	height:3.906rem;
+	margin-left:0.531rem;
+	background:#609;
+	margin-top:1.01rem;
+	margin-right:0.578rem;
+	}
+.line{
+	width:10rem;
+	height:1px;
+	background:#000;
+	margin-top:3rem;}
+//移动端一像素
+@media (-webkit-min-device-pixel-ratio:1){
+	.line1{
+	width:10rem;
+	height:1px;
+	transform:scale(1,0.1);
+	background:#000;
+	margin-top:3rem;}
+	}
+@media (-webkit-min-device-pixel-ratio:2){
+	.line1{
+	width:10rem;
+	height:1px;
+	transform:scale(1,0.5);
+	background:#000;
+	margin-top:3rem;}
+	}
+
+	@media (-webkit-min-device-pixel-ratio:3){
+	.line1{
+	width:10rem;
+	height:1px;
+	transform:scale(1,0.3);
+	background:#FF0;
+	margin-top:3rem;}
+	}
+</style>
+
+<script>
+window.onload=function(){
+	var yzm=document.getElementById("yzm");
+	var a1=document.getElementById("a1");
+	a1.onclick=function(){
+		var myDate=new Date();
+		yzm.src="1.php?"+myDate.getTime();;
+		}
+	
+	}
+</script>
+
+</head>
+
+<body>
+
+<!--<div class="father">
+
+<div class="son1"></div>
+<div class="son2"></div>
+
+</div>
+<div class="line"></div>
+<div class="line1"></div>-->
+
+<img src="1.php" id="yzm"/>
+<a href="javascript:;" id="a1">看不清，换一张</a>
+</body>
+</html>

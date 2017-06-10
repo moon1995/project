@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+#keywords{
+	width:200px;
+}
+#info{
+	width: 200px;
+	border: 0px solid #f00;
+}
+#bt1{
+	position: absolute;
+	top:100px;
+}
+.blue{
+	font:12px bold aria;
+	color:#00f;
+}
+.blue a{
+	text-decoration: none;
+	color:#f00;
+	float:right;
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	 var keywords=document.getElementById("keywords");
+	  var info=document.getElementById("info");
+	   var bt1=document.getElementById("bt1");
+	   var i=document.cookie.split("; ").length;
+	   bt1.onclick=function(){
+	   	var MyDate=new Date();
+	   	var days=MyDate.getTime()+24*10*3600*1000;
+	   	MyDate.setTime(days);
+	   	var datecookie="keywords"+i+"="+encodeURI(keywords.value);
+	   	i++;
+	   	document.cookie=datecookie+"; expires=" +MyDate.toGMTString();
+	   	if(document.cookie!=""){
+	   			keywords.onkeyup=keywords.onkeydown=function(){
+	   				info.innerHTML='';
+	   				var data=document.cookie.split("; ");
+	   				for(var i in data){
+	   						var datalist=data[i].split("=");
+	   						if(decodeURI(datalist[1]).indexOf(keywords.value)!=-1 && keywords.value !=""){
+	   								info.innerHTML+="<div class='blue'>"+decodeURI(datalist[1])+"<a href='javascript:; ' index="+(i+1)+">删除</a></div>";
+	   								info.style.borderWidth='10px';
+	   								for(var j=0;j<info.children.length;j++){
+	   									info.children[j].onclick=function(){
+	   										keywords.value=this.innerText.substr(0,this.innerText.length-2);
+	   									}
+	   									info.children[j].onmouseover=function(){
+	   										this.style.backgroundColor="#ccc";
+	   									}
+	   									info.children[j].onmouseout=function(){
+	   										this.style.backgroundColor="";
+	   									}
+	   									info.children[j].children[0].onclick=function(){
+	   										this.parentNode.outerHTML="";
+	   										var mydate=new Date();
+	   										mydate.setTime(mydate.getTime()-1000);
+	   										document.cookie="keywords" +this.getAttribute("index")+"=''; expires=" +mydate.toGMTString();
+	   									}
+	   								}
+	   						}else{
+	   							info.style.borderWidth='0';
+	   						}
+
+	   				}
+	   			}
+	   	}
+	   }
+}
+</script>
+</head>
+
+<body>
+<input type="text" id="keywords" />
+<div id="info" ></div>
+<input type="button" id="bt1" value="百度一下" />
+</body>
+</html>

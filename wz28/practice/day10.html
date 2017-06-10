@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="md5.js"></script>
+<script>
+window.onload=function(){
+	var $=function(id){
+		var id=document.getElementById(id);
+		return id;
+	}
+		var user=$("user");
+		var pwd=$("pwd");
+		var info=$("info");
+		var btn=$("btn");
+	
+		btn.onclick=function(){
+				if(info.value=="yes"){
+			var mydate=new Date();
+			var now=mydate.getTime();
+			var day=10*24*3600*1000;
+			mydate.setTime(now+day);
+			pwd=hex_md5(pwd.value);
+			var data1="user="+encodeURI(user.value)+"; expires"+mydate.toGMTString();
+			var data2="pwd="+encodeURI(pwd)+"; expires"+mydate.toGMTString();
+			document.cookie=data1;
+			document.cookie=data2;
+			}
+		}
+		if(document.cookie){
+			var user=decodeURI(document.cookie.split("; ")[0].split("=")[1]);
+			var pwd=decodeURI(document.cookie.split("; ")[1].split("=")[1]);
+			}
+			if(user=="wangsan" &&　pwd=="123"){
+				location.href="get.html";}
+	}
+</script>
+</head>
+
+<body>
+用户名：
+<input type="text" id="user" />
+密码：
+<input type="password" id="pwd" />
+<input type="checkbox" id="info" value="yes"/>是否是十天免登陆<br />
+<input type="button" id="btn" value="提交"/>
+</body>
+</html>

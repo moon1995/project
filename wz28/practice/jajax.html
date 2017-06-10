@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div{
+border:10px splid #f00;
+height:200px;
+}
+</style>
+<script src='jquery-1.11.2.js' ></script>
+<script>
+$(function(){
+	$.ajaxSetup({
+		url:"info.php",type:"POST",
+		
+		dataType:"json",
+		cache:false,
+
+		});
+		$.ajax({
+			data:{"cate":"indre"},
+				success:function(data){
+
+	var str="<h3>hang内资讯</h3>"
+				
+				for(var i in data){
+						str+="<img src=images/"+data[i].img+" width=200px />"+data[i].id+data[i].name;
+						
+				}
+				indre.innerHTML=str;		
+			
+			}
+		})
+				$.ajax({
+			data:{"cate":"company"},
+			success:function(data){
+
+	var str="<h3>ye内资讯</h3>"
+				
+				for(var i in data){
+						str+="<img src=images/"+data[i].img+" width=200px />"+data[i].id+data[i].name;
+						
+				}
+				company.innerHTML=str;		
+			}
+			})
+			
+
+})
+</script>
+
+</head>
+
+<body>
+<div id="indre">
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+</div>
+<div id="company">
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+</div>
+
+
+</body>
+</html>

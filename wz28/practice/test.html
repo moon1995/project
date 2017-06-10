@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模拟百度搜索引擎，提示用户搜索过的信息</title>
+<style>
+#showCookie{
+	color:#709EED;
+	font-family:微软雅黑;
+}
+#showCookie div{
+	cursor:pointer;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var bt1=document.getElementById("bt1");//获得百度一下按钮
+	var keywords=document.getElementById("keywords");//获得文本框对象
+	var showCookie=document.getElementById("showCookie");//获得文本框下面显示cookie提示信息位置
+	bt1.onclick=function(){//给百度一下绑定点击事件，点击百度一下，存储用户输入过得信息到cookie中
+		var myDate=new Date();
+		var ms=myDate.getTime()+3600*24*7*1000;
+		myDate.setTime(ms);
+		//每次存储cookie变量的名称必须不同，要不然就覆盖了，所以变量名 keywords+ms
+		var data="keywords"+ms+"="+keywords.value+"; expires="+myDate.toGMTString();
+		document.cookie=data;//存储cookie
+		};
+	keywords.onfocus=function(){
+	
+			var data=document.cookie;
+			if(data!=""){
+		      dataArray=data.split("; ");	
+		      showCookie.innerHTML="";		
+		   for(j=0;j<dataArray.length;j++){
+				   dataKeywords=dataArray[j].split("=");
+				   showCookie.innerHTML+="<div>"+dataKeywords[1]+"</div>";
+		     }			
+		     var divCookie=showCookie.children;//获得showCookie里面所有元素节点，也就是div
+		     for(i=0;i<divCookie.length;i++){
+			     divCookie[i].onclick=function(){//为每一个div循环绑定onclick事件
+				    keywords.value=this.innerHTML;//点击后显示到keywords中	 
+			  }	 
+			}
+		 }else{
+		    showCookie.innerHTML="";	 
+		 }
+	  }
+	};
+</script>
+</head>
+
+<body>
+<input  type="text" name="keywords" id="keywords" size="30">
+<input type="button" id="bt1" value="百度一下">
+<div id="showCookie"></div>
+</body>
+</html>

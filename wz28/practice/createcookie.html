@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>创建cookie</title>
+<script>
+var myDate=new Date();
+//myDate当前时间
+//myDate存储10天后的时间
+//思路:
+//获取当前时间的时间戳
+//根据当前时间戳获取10天后的时间戳
+//根据10天后的时间戳，获得10天后的时间
+var day10ms=myDate.getTime()+10*24*3600*1000;
+myDate.setTime(day10ms);
+//创建cookie变量
+document.cookie="userName="+encodeURI("tom")+"; expires="+myDate.toGMTString();
+</script>
+</head>
+
+<body>
+</body>
+</html>

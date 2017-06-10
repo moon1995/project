@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	</script>
+	<script type="text/babel">
+		class AjaxComponent extends React.Component{
+		constructor(){
+		super();
+		this.state={ //json.php那是数组，初始状态必须是数组
+		person:[]
+			}
+		}
+		componentDidMount(){
+		$.ajax({
+		url:"json.php",
+		type:"GET",
+		datatype:"json",
+		success:function(data){
+			var str=[];
+			$.each(data,function(index,value){
+				str.push(["姓名："+value.name,"年龄："+value.age,"性别："+value.sex]);
+				});
+			this.setState({
+			person:str
+						})
+					}.bind(this)
+				});
+			}
+			render(){
+			return <ul>
+				<li>{this.state.str}</li>
+				
+			</ul>
+			}
+		}
+	ReactDOM.render(
+	<AjaxComponent />,
+	document.getElementById("div1")
+
+	);
+	</script>
+
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

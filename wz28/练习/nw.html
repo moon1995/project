@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+ul,body{
+	margin: 0;
+	padding:0;
+	}
+ul{
+	
+	list-style:none;
+	overflow:hidden;	
+	}
+li{
+	background: red;
+	width:100px;
+	float:left;
+}
+.wa{
+	width: 300px;
+	display:none;
+}
+.hy{
+	background: green;
+}
+</style>
+<script src="wz28/jquery-1.11.2.js" ></script>
+<script>
+$(function(){
+	$("li").mouseover(function(){
+		$(this).addClass("hy").siblings().removeClass("hy").end().parent("ul").next().children(":eq("+$(this).index()+")").show().siblings().hide();
+	})
+	})
+</script>
+</head>
+
+<body>
+<ul>
+	<li>项目一</li>
+	<li>项目二</li>
+	<li>项目三</li>
+</ul>
+<div>
+	<div class="wa">11111</div>
+<div class="wa">22222</div>
+<div class="wa">3333</div>
+</div>
+</body>
+</html>

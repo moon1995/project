@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>t
+div{
+	height:600px;}
+
+</style>
+<script src="add.js" ></script>
+<script src="ajax.js"></script>
+<script>
+	add(window,"load",function(){
+		var indre=document.getElementById("indre");
+			var company=document.getElementById("company");
+			var ajax=new Ajax();
+			var post_data="cate=indre";
+			ajax.ajaxopen("POST","info.php")
+			ajax.setHeader();
+			ajax.onready(function(){
+				if(ajax.html.readyState==4 && ajax.html.status==200){
+					var data=eval("("+ajax.html.responseText+")");
+					var str="<h3>业内资讯</h3>"
+					for(var i in data){
+						str+="<img src=images/"+data[i].img+" width=200px />"+data[i].id+data[i].name;
+						
+						}
+						indre.innerHTML=str;
+					}
+					});
+					ajax.send(post_data);
+				
+				var ajax1=new Ajax();
+			var post_data1="cate=company";
+			ajax1.ajaxopen("POST","info.php")
+			ajax1.setHeader();
+			ajax1.onready(function(){
+				if(ajax1.html.readyState==4 && ajax1.html.status==200){
+					var data=eval("("+ajax1.html.responseText+")");
+					var str="<h3>业内资讯</h3>"
+					for(var i in data){
+						str+="<img src=images/"+data[i].img+" width=200px />"+data[i].id+data[i].name;
+						
+						}
+						company.innerHTML=str;
+					}
+				});
+				ajax1.send(post_data1);
+		});
+</script>
+</head>
+
+<body>
+<div id="indre">
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+</div>
+<div id="company">
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+<img src="images/loading.gif"/>
+</div>
+</body>
+</html>
