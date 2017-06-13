@@ -1,0 +1,33 @@
+@font-face{
+	font-family: "微软雅黑";
+	src:url("msyh.ttf") format("TrueType");
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	font-size: 100px;
+	
+}
+header{
+	width: 6.4rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.4rem;
+	font-family: "微软雅黑";
+	text-align: center;
+	background:-webkit-linear-gradient(top, rgba(200, 200, 200, 1) 0%, rgba(233, 233, 233, 1) 50%, rgba(200, 200, 200, 1) 100%);  repeat-x;
+
+	font-weight: bold;
+}
+
+
+footer{
+	width:6.4rem;
+	background-color: rgb(233,233,233);
+	color: #555;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.25rem;
+}
